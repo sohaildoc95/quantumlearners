@@ -3,99 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Learners</title>
+    <title>Quantum Learners - Login</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation will be inserted here by navigation.js -->
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Our Website</h1>
-                <p>We create amazing digital experiences</p>
-                <button class="cta-button">Get Started</button>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Quantum <span>Learners</span></h1>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>We are a passionate team dedicated to creating innovative solutions for our clients. Our expertise spans across various domains, and we're committed to delivering excellence in everything we do.</p>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required 
+                           pattern="[0-9]{10}" placeholder="Enter your phone number"
+                           title="Please enter a valid 10-digit phone number">
                 </div>
-                <div class="about-image">
-                    <img src="assets/images/about.jpg" alt="About Us">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required 
+                               placeholder="Enter your password">
+                        <i class="toggle-password fas fa-eye" onclick="togglePassword()"></i>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Custom websites and web applications built with the latest technologies.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Beautiful and intuitive user interfaces that enhance user experience.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3><span class="footer-logo-quantum">Quantum</span><span class="footer-logo-learners">Learners</span></h3>
-                <p>Creating digital excellence</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/about.html">About</a></li>
-                    <li><a href="pages/services.html">Services</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Quantum Learners. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="module">
+        import { loginUser } from './assets/js/firebase-config.js';
+
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                await loginUser(phoneNumber, password);
+                // Redirect to dashboard on successful login
+                window.location.href = '/protected/pages/dashboard/index.html';
+            } catch (error) {
+                errorMessage.textContent = 'Invalid phone number or password';
+                errorMessage.style.display = 'block';
+            }
+        });
+
+        window.togglePassword = function() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        };
+
+        // Check if user is already logged in
+        const user = sessionStorage.getItem('user');
+        if (user) {
+            window.location.href = '/protected/pages/dashboard/index.html';
+        }
+    </script>
 </body>
 </html> 
