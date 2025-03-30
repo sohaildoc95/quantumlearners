@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Quantum Learners</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation will be inserted here by navigation.js -->
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Student Dashboard</h1>
+            <div class="user-info">
+                <span class="user-name">Welcome, Student</span>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Quick Stats -->
+            <div class="dashboard-card stats-card">
+                <h2>Quick Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <div class="stat-info">
+                            <span class="stat-value">85%</span>
+                            <span class="stat-label">Average Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="stat-info">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Tests Completed</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-info">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Pending Tests</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-card activity-card">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="activity-info">
+                            <span class="activity-title">Completed Math Test</span>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-book"></i>
+                        <div class="activity-info">
+                            <span class="activity-title">Started Physics Module</span>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-trophy"></i>
+                        <div class="activity-info">
+                            <span class="activity-title">Achieved New Badge</span>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Tests -->
+            <div class="dashboard-card tests-card">
+                <h2>Upcoming Tests</h2>
+                <div class="test-list">
+                    <div class="test-item">
+                        <div class="test-info">
+                            <span class="test-title">Chemistry Final</span>
+                            <span class="test-date">Tomorrow, 10:00 AM</span>
+                        </div>
+                        <button class="start-test-btn">Start Test</button>
+                    </div>
+                    <div class="test-item">
+                        <div class="test-info">
+                            <span class="test-title">Biology Quiz</span>
+                            <span class="test-date">Next Week, Monday</span>
+                        </div>
+                        <button class="start-test-btn">Start Test</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Overview -->
+            <div class="dashboard-card progress-card">
+                <h2>Progress Overview</h2>
+                <div class="progress-chart">
+                    <div class="progress-item">
+                        <div class="progress-label">Mathematics</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <div class="progress-value">75%</div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">Physics</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <div class="progress-value">60%</div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">Chemistry</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="progress-value">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/protection.js"></script>
+</body>
+</html> 

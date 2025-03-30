@@ -1,0 +1,44 @@
+{
+    "testId": "unique-test-id",
+    "testName": "Test Name Here",
+    "totalQuestions": 10,
+    "timeLimit": 30,
+    "subject": "Subject Name",
+    "yearGroup": "Year X",
+    "examType": "Regular/Competitive",
+    "difficulty": "Easy/Medium/Hard",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Write your question here?",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3",
+                "Option 4"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Explanation for the correct answer",
+            "subject": "Specific subject/topic",
+            "marks": 1
+        }
+    ],
+    "passingScore": 60,
+    "feedbackRanges": [
+        {
+            "min": 0,
+            "max": 40,
+            "message": "Keep practicing! You'll improve with more study."
+        },
+        {
+            "min": 41,
+            "max": 70,
+            "message": "Good effort! You're on the right track."
+        },
+        {
+            "min": 71,
+            "max": 100,
+            "message": "Excellent work! You've shown great understanding."
+        }
+    ]
+} 

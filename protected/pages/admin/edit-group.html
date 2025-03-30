@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Group - Quantum Learners</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/admin/groups.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation will be inserted here by navigation.js -->
+
+    <main class="groups-container">
+        <div class="groups-header">
+            <h1>Edit Group</h1>
+            <a href="groups.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Groups
+            </a>
+        </div>
+
+        <div class="form-container">
+            <form id="editGroupForm" class="group-form">
+                <div class="form-group">
+                    <label for="groupName">Group Name</label>
+                    <input type="text" id="groupName" name="groupName" required 
+                           placeholder="Group name">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" required
+                              placeholder="Description"></textarea>
+                </div>
+
+                <div class="form-group permissions-section">
+                    <h2>Page Permissions</h2>
+                    <div class="permissions-table-container">
+                        <table class="permissions-table">
+                            <thead>
+                                <tr>
+                                    <th>Page Name</th>
+                                    <th>Access</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dashboard</td>
+                                    <td><input type="checkbox" name="dashboard_access"></td>
+                                </tr>
+                                <tr>
+                                    <td>Groups</td>
+                                    <td><input type="checkbox" name="groups_access"></td>
+                                </tr>
+                                <tr>
+                                    <td>Users</td>
+                                    <td><input type="checkbox" name="users_access"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="window.location.href='groups.html'">
+                        Cancel
+                    </button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-save"></i> Update Group
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/protection.js"></script>
+    <script>
+        // Get group index from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const groupIndex = urlParams.get('index');
+
+        // Load group data when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            if (groupIndex !== null) {
+                const groups = JSON.parse(localStorage.getItem('groups') || '[]');
+                const group = groups[groupIndex];
+                
+                if (group) {
+                    // Fill form with group data
+                    document.getElementById('groupName').value = group.groupName;
+                    document.getElementById('description').value = group.description;
+                    
+                    // Set permissions checkboxes
+                    document.querySelector('[name="dashboard_access"]').checked = group.permissions.dashboard;
+                    document.querySelector('[name="groups_access"]').checked = group.permissions.groups;
+                    document.querySelector('[name="users_access"]').checked = group.permissions.users;
+                }
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('editGroupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                groupName: document.getElementById('groupName').value,
+                description: document.getElementById('description').value,
+                permissions: {
+                    dashboard: document.querySelector('[name="dashboard_access"]').checked,
+                    groups: document.querySelector('[name="groups_access"]').checked,
+                    users: document.querySelector('[name="users_access"]').checked
+                }
+            };
+
+            // Update group in localStorage
+            const groups = JSON.parse(localStorage.getItem('groups') || '[]');
+            if (groupIndex !== null && groupIndex < groups.length) {
+                groups[groupIndex] = formData;
+                localStorage.setItem('groups', JSON.stringify(groups));
+                window.location.href = 'groups.html';
+            }
+        });
+    </script>
+</body>
+</html> 

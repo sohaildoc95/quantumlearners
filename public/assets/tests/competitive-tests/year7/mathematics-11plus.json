@@ -1,0 +1,170 @@
+{
+    "testId": "year7-mathematics-11plus",
+    "testName": "Year 7 Mathematics - 11+ Practice Test",
+    "totalQuestions": 10,
+    "timeLimit": 10,
+    "subject": "Mathematics",
+    "yearGroup": "Year 7",
+    "examType": "11plus",
+    "difficulty": "Hard",
+    "questions": [
+        {
+            "id": 1,
+            "question": "If 3x + 7 = 22, what is the value of 5x - 2?",
+            "options": [
+                "23",
+                "25",
+                "27",
+                "29"
+            ],
+            "correctAnswer": 1,
+            "explanation": "First solve for x: 3x = 15, so x = 5. Then calculate 5x - 2: 5(5) - 2 = 25 - 2 = 25",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 2,
+            "question": "A shop offers a 15% discount on a £80 item. What is the final price?",
+            "options": [
+                "£65",
+                "£68",
+                "£72",
+                "£75"
+            ],
+            "correctAnswer": 1,
+            "explanation": "15% of £80 = £12 discount. Final price = £80 - £12 = £68",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 3,
+            "question": "What is the next number in the sequence: 3, 7, 15, 31, __?",
+            "options": [
+                "63",
+                "47",
+                "51",
+                "59"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Each number is doubled and then 1 is added: 3×2+1=7, 7×2+1=15, 15×2+1=31, 31×2+1=63",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 4,
+            "question": "The ratio of boys to girls in a class is 3:4. If there are 28 students in total, how many boys are there?",
+            "options": [
+                "12",
+                "16",
+                "14",
+                "18"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Total parts = 7 (3+4). Each part = 28÷7 = 4. Boys = 3×4 = 12",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 5,
+            "question": "What is the area of a triangle with base 8cm and height 12cm?",
+            "options": [
+                "48 cm²",
+                "96 cm²",
+                "24 cm²",
+                "36 cm²"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Area of triangle = ½ × base × height = ½ × 8 × 12 = 48 cm²",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 6,
+            "question": "If a cube has edges of length 5cm, what is its volume?",
+            "options": [
+                "75 cm³",
+                "100 cm³",
+                "125 cm³",
+                "150 cm³"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Volume of cube = length³ = 5 × 5 × 5 = 125 cm³",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 7,
+            "question": "What is 2³ × 2⁴?",
+            "options": [
+                "2⁷",
+                "2⁶",
+                "2¹²",
+                "2⁵"
+            ],
+            "correctAnswer": 0,
+            "explanation": "When multiplying powers with same base, add exponents: 2³ × 2⁴ = 2³⁺⁴ = 2⁷",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 8,
+            "question": "What fraction of 24 is 9?",
+            "options": [
+                "3/8",
+                "2/3",
+                "5/8",
+                "3/4"
+            ],
+            "correctAnswer": 0,
+            "explanation": "9 is 3/8 of 24 because 24 × 3/8 = 9",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 9,
+            "question": "If 5 pencils cost £3, how much do 8 pencils cost?",
+            "options": [
+                "£4.00",
+                "£4.80",
+                "£4.50",
+                "£5.00"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Cost per pencil = £3 ÷ 5 = £0.60. Cost of 8 pencils = 8 × £0.60 = £4.80",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 10,
+            "question": "What is the sum of the angles in a pentagon?",
+            "options": [
+                "360°",
+                "450°",
+                "540°",
+                "720°"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Sum of angles in a pentagon = (n-2) × 180° where n=5. So (5-2) × 180° = 540°",
+            "subject": "Mathematics",
+            "marks": 1
+        }
+    ],
+    "passingScore": 70,
+    "feedbackRanges": [
+        {
+            "min": 0,
+            "max": 50,
+            "message": "Keep practicing! Focus on problem-solving strategies and time management."
+        },
+        {
+            "min": 51,
+            "max": 80,
+            "message": "Good effort! You're showing strong potential for the 11+ exam."
+        },
+        {
+            "min": 81,
+            "max": 100,
+            "message": "Excellent work! You're well-prepared for the 11+ exam."
+        }
+    ]
+} 

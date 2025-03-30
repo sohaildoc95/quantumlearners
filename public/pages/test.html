@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Test - Quantum Learners</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">
+                <span class="logo-quantum">Quantum</span><span class="logo-learners"> Learners</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="test.html" class="test-btn">Free Test</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="login-section">
+            <div class="login-container">
+                <h1 class="login-heading">Start Your Free Test</h1>
+                <form id="testForm" class="login-form">
+                    <div class="form-group">
+                        <label for="class">Select Your Class *</label>
+                        <select id="class" name="class" required>
+                            <option value="">Select your class</option>
+                            <option value="year1">Year 1</option>
+                            <option value="year2">Year 2</option>
+                            <option value="year3">Year 3</option>
+                            <option value="year4">Year 4</option>
+                            <option value="year5">Year 5</option>
+                            <option value="year6">Year 6</option>
+                            <option value="year7">Year 7</option>
+                            <option value="year8">Year 8</option>
+                            <option value="year9">Year 9</option>
+                            <option value="year10">Year 10</option>
+                            <option value="year11">Year 11</option>
+                            <option value="year12">Year 12</option>
+                            <option value="year13">Year 13</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Select Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select subject</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="English">English</option>
+                            <option value="Science">Science</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="competitive">Preparing for Competitive Exam?</label>
+                        <select id="competitive" name="competitive">
+                            <option value="">Select exam (optional)</option>
+                            <option value="11plus">11+ Exam</option>
+                            <option value="sats">SATs</option>
+                            <option value="gcse">GCSE</option>
+                            <option value="alevel">A-Level</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Proceed to Test</button>
+                </form>
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    Please select your class to proceed.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><span class="footer-logo-quantum">Quantum</span><span class="footer-logo-learners">Learners</span></h3>
+                <p>Creating digital excellence</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quantum Learners. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const classValue = document.getElementById('class').value;
+            const subjectValue = document.getElementById('subject').value;
+            const competitiveValue = document.getElementById('competitive').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (!classValue) {
+                errorMessage.style.display = 'block';
+                return;
+            }
+            
+            if (!subjectValue) {
+                errorMessage.textContent = 'Please select a subject to proceed.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+            
+            // Redirect to the test page with appropriate parameters
+            let testUrl = `take-test.html?class=${classValue}&subject=${subjectValue}`;
+            if (competitiveValue) {
+                testUrl += `&exam=${competitiveValue}`;
+            }
+
+            // Log the URL for debugging
+            console.log('Redirecting to:', testUrl);
+            window.location.href = testUrl;
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,170 @@
+{
+    "testId": "year7-science",
+    "testName": "Year 7 Science Assessment",
+    "totalQuestions": 10,
+    "timeLimit": 10,
+    "subject": "Science",
+    "yearGroup": "Year 7",
+    "examType": "Regular",
+    "difficulty": "Medium",
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the process by which plants make their own food?",
+            "options": [
+                "Respiration",
+                "Photosynthesis",
+                "Digestion",
+                "Absorption"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Photosynthesis is the process where plants use sunlight to make glucose from carbon dioxide and water.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 2,
+            "question": "Which of these is a magnetic material?",
+            "options": [
+                "Wood",
+                "Plastic",
+                "Iron",
+                "Copper"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Iron is a magnetic material that can be attracted to magnets.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 3,
+            "question": "What is the name of the force that pulls objects towards the Earth?",
+            "options": [
+                "Friction",
+                "Gravity",
+                "Tension",
+                "Air resistance"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Gravity is the force that pulls objects towards the center of the Earth.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 4,
+            "question": "Which part of a plant absorbs water and minerals from the soil?",
+            "options": [
+                "Leaves",
+                "Stem",
+                "Roots",
+                "Flowers"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Roots absorb water and minerals from the soil for the plant.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 5,
+            "question": "What is the normal body temperature of a healthy human in Celsius?",
+            "options": [
+                "35°C",
+                "36.5°C",
+                "37°C",
+                "38°C"
+            ],
+            "correctAnswer": 2,
+            "explanation": "The normal human body temperature is approximately 37°C.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 6,
+            "question": "Which state of matter has a fixed volume but no fixed shape?",
+            "options": [
+                "Solid",
+                "Liquid",
+                "Gas",
+                "Plasma"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Liquids have a fixed volume but take the shape of their container.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 7,
+            "question": "What is the main function of red blood cells?",
+            "options": [
+                "Fight infection",
+                "Carry oxygen",
+                "Produce antibodies",
+                "Clot blood"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Red blood cells carry oxygen around the body.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 8,
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Venus",
+                "Jupiter",
+                "Mars",
+                "Saturn"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Mars is called the Red Planet due to its reddish appearance.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 9,
+            "question": "What type of energy is stored in food?",
+            "options": [
+                "Kinetic energy",
+                "Chemical energy",
+                "Heat energy",
+                "Light energy"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Food stores chemical energy which is released during digestion.",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 10,
+            "question": "What is the process of changing from a liquid to a gas called?",
+            "options": [
+                "Melting",
+                "Freezing",
+                "Evaporation",
+                "Condensation"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Evaporation is the process where a liquid changes into a gas.",
+            "subject": "Science",
+            "marks": 1
+        }
+    ],
+    "passingScore": 60,
+    "feedbackRanges": [
+        {
+            "min": 0,
+            "max": 40,
+            "message": "Keep practicing your science! Focus on understanding basic concepts."
+        },
+        {
+            "min": 41,
+            "max": 70,
+            "message": "Good effort! You're showing good understanding of scientific concepts."
+        },
+        {
+            "min": 71,
+            "max": 100,
+            "message": "Excellent work! You've demonstrated strong scientific knowledge."
+        }
+    ]
+} 

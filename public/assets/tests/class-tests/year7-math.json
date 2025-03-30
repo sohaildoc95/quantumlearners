@@ -1,0 +1,72 @@
+{
+    "testId": "year7-math",
+    "testName": "Year 7 Mathematics Assessment",
+    "totalQuestions": 10,
+    "timeLimit": 30,
+    "subject": "Mathematics",
+    "yearGroup": "Year 7",
+    "examType": "Regular",
+    "difficulty": "Medium",
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is 25% of 80?",
+            "options": [
+                "15",
+                "20",
+                "25",
+                "30"
+            ],
+            "correctAnswer": 1,
+            "explanation": "25% is one quarter, so 80 ÷ 4 = 20",
+            "subject": "Percentages",
+            "marks": 1
+        },
+        {
+            "id": 2,
+            "question": "Solve: 3x + 7 = 22",
+            "options": [
+                "3",
+                "5",
+                "7",
+                "15"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Subtract 7 from both sides: 3x = 15, then divide by 3: x = 5",
+            "subject": "Algebra",
+            "marks": 1
+        },
+        {
+            "id": 3,
+            "question": "What is the area of a rectangle with length 8cm and width 5cm?",
+            "options": [
+                "13 cm²",
+                "26 cm²",
+                "40 cm²",
+                "45 cm²"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Area of rectangle = length × width = 8 × 5 = 40 cm²",
+            "subject": "Geometry",
+            "marks": 1
+        }
+    ],
+    "passingScore": 60,
+    "feedbackRanges": [
+        {
+            "min": 0,
+            "max": 40,
+            "message": "Keep practicing your math skills. Focus on understanding the basic concepts."
+        },
+        {
+            "min": 41,
+            "max": 70,
+            "message": "Good effort! Review the topics you found challenging and try again."
+        },
+        {
+            "min": 71,
+            "max": 100,
+            "message": "Excellent work! You have a strong understanding of Year 7 mathematics."
+        }
+    ]
+} 

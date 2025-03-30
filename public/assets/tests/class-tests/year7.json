@@ -1,0 +1,100 @@
+{
+    "testId": "year7",
+    "testName": "Year 7 General Assessment",
+    "totalQuestions": 10,
+    "timeLimit": 30,
+    "subject": "General Knowledge",
+    "yearGroup": "Year 7",
+    "examType": "Regular",
+    "difficulty": "Medium",
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the next number in the sequence: 2, 4, 8, 16, __?",
+            "options": [
+                "24",
+                "28",
+                "32",
+                "36"
+            ],
+            "correctAnswer": 2,
+            "explanation": "The sequence multiplies each number by 2. So, 16 × 2 = 32",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 2,
+            "question": "Which word is a synonym for 'happy'?",
+            "options": [
+                "Sad",
+                "Joyful",
+                "Angry",
+                "Tired"
+            ],
+            "correctAnswer": 1,
+            "explanation": "'Joyful' means the same as 'happy'",
+            "subject": "English",
+            "marks": 1
+        },
+        {
+            "id": 3,
+            "question": "What is 25% of 80?",
+            "options": [
+                "15",
+                "20",
+                "25",
+                "30"
+            ],
+            "correctAnswer": 1,
+            "explanation": "25% is one quarter, so 80 ÷ 4 = 20",
+            "subject": "Mathematics",
+            "marks": 1
+        },
+        {
+            "id": 4,
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Venus",
+                "Jupiter",
+                "Mars",
+                "Saturn"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Mars is known as the Red Planet due to its reddish appearance",
+            "subject": "Science",
+            "marks": 1
+        },
+        {
+            "id": 5,
+            "question": "What is the past tense of 'write'?",
+            "options": [
+                "Wrote",
+                "Written",
+                "Writed",
+                "Writing"
+            ],
+            "correctAnswer": 0,
+            "explanation": "The past tense of 'write' is 'wrote'",
+            "subject": "English",
+            "marks": 1
+        }
+    ],
+    "passingScore": 60,
+    "feedbackRanges": [
+        {
+            "min": 0,
+            "max": 40,
+            "message": "Keep practicing! You'll improve with more study."
+        },
+        {
+            "min": 41,
+            "max": 70,
+            "message": "Good effort! You're on the right track."
+        },
+        {
+            "min": 71,
+            "max": 100,
+            "message": "Excellent work! You've shown great understanding."
+        }
+    ]
+} 

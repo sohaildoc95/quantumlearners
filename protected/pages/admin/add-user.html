@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User - Quantum Learners</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/admin/users.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation will be inserted here by navigation.js -->
+
+    <main class="users-container">
+        <div class="users-header">
+            <h1>Add New User</h1>
+            <a href="users.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Users
+            </a>
+        </div>
+
+        <div class="form-container">
+            <form id="addUserForm" class="user-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required 
+                           placeholder="Enter full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required
+                           placeholder="Enter phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <input type="text" id="class" name="class" required
+                           placeholder="Enter class">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required
+                           placeholder="Enter subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required
+                           placeholder="Enter password">
+                </div>
+
+                <div class="form-group">
+                    <label for="userGroup">User Group</label>
+                    <select id="userGroup" name="userGroup" required>
+                        <option value="">Select a group</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="window.location.href='users.html'">
+                        Cancel
+                    </button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-plus"></i> Create User
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../../assets/js/navigation.js"></script>
+    <script src="../../assets/js/protection.js"></script>
+    <script>
+        // Load available groups for the select dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const groups = JSON.parse(localStorage.getItem('groups') || '[]');
+            const userGroupSelect = document.getElementById('userGroup');
+            
+            groups.forEach(group => {
+                const option = document.createElement('option');
+                option.value = group.groupName;
+                option.textContent = group.groupName;
+                userGroupSelect.appendChild(option);
+            });
+        });
+
+        document.getElementById('addUserForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                phoneNumber: document.getElementById('phoneNumber').value,
+                class: document.getElementById('class').value,
+                subject: document.getElementById('subject').value,
+                password: document.getElementById('password').value,
+                userGroup: document.getElementById('userGroup').value
+            };
+
+            // Store in localStorage
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            users.push(formData);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            // Redirect back to users page
+            window.location.href = 'users.html';
+        });
+    </script>
+</body>
+</html> 
