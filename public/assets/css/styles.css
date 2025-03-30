@@ -79,17 +79,16 @@ body {
 }
 
 .nav-links .login-btn {
-    padding: 0.5rem 1.5rem;
-    border: 2px solid #02a1d1;
-    border-radius: 25px;
-    color: black;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    background-color: #02a1d1;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .nav-links .login-btn:hover {
-    background-color: #02a1d1;
-    color: white;
+    background-color: #0288b0;
 }
 
 .nav-links .test-btn {
